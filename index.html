@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/c761e5bd78.js" crossorigin="anonymous"></script>
+    <title>Ebay clone</title>
+</head>
+<body id="body">
+    <header id="header">
+        <nav id="top-navbar">
+            <div class="grey-border"></div>  
+            <ul class="left-navbar">    
+                <li>
+                    Hi! 
+                    <a href="#" class="left-navbar__link--blue">Sign in</a>
+                    or 
+                    <a href="#"class="left-navbar__link--blue">register</a>
+                </li>
+                <li>
+                    <a href="#">Daily Deals</a>
+                </li>
+                <li>
+                    <a href="#">Help & Contact</a>
+                </li>
+            </ul>
+            <ul class="right-navbar">
+                <li>
+                    <img class="right-navbar__flag" src="data:image/png;base64,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">
+                </li>
+                <li>
+                    <a href="#" class="right-navbar__link--blue">Ship to</a>
+                </li>
+                <li>
+                    <a href="#" class="right-navbar__link--underline">Sell</a>
+                </li>
+                <li>
+                    <div class="right-navbar__dropdown__watchlist">
+                        <a href="#">
+                            Watchlist
+                            <i class="right-navbar__dropdown-icon fa-solid fa-angle-down"></i>
+                        </a>
+                    </div>
+                    <div class="watchlist-dropdown">
+                        <a class="h2" href="#">
+                            View all items you are watching
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a class="img-wrapper" href="#">
+                            <img src="https://i.ebayimg.com/thumbs/images/g/I3EAAOSw6k5jHldc/s-l225.jpg">
+                            <p>UNLOCKED SERVICE <br>ALL AT&T Apple Iphone 14</p>
+                        </a>
+                        <p class="price">$6.99</p>
+                        <p class="details">Free shipping</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="right-navbar__dropdown-ebay">
+                        <a href="#">
+                            My eBay
+                            <i class="right-navbar__dropdown-icon fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#" class="first">Summary</a>
+                            </li>
+                            <li>
+                                <a href="#">Recently Viewed</a>
+                            </li>
+                            <li>
+                                <a href="#">Bids/Offers</a>
+                            </li>
+                            <li>
+                                <a href="#">Watchlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Purchase History</a>
+                            </li>
+                            <li>
+                                <a href="#">Buy Again</a>
+                            </li>
+                            <li>
+                                <a href="#">Selling</a>
+                            </li>
+                            <li>
+                                <a href="#">Saved Searches</a>
+                            </li>
+                            <li>
+                                <a href="#">Saved Sellers</a>
+                            </li>
+                            <li>
+                                <a href="#">Messages</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <i class="right-navbar__icon fa-solid fa-bell"></i>
+                </li>
+                <li>
+                    <i class="right-navbar__icon fa-solid fa-cart-shopping"></i>
+                </li>
+            </ul>
+        </nav> 
+        <nav id="search-navbar"> 
+            <img id="ebay-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/2560px-EBay_logo.svg.png" alt="ebay logo">
+            <div class="category-wrapper">
+                <p>Shop by <br>category</p>
+                <i class="category__icon fa-solid fa-angle-down"></i>
+            </div>    
+            <form action="" method="get">
+                <div class="search-box">
+                    <i class="search-input-icon fa-solid fa-magnifying-glass"></i>
+                    <input  class="search-text" type="text" placeholder="Search for anything"/>
+                    <div class="search-category">
+                        All Categories
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+                <input class="search-btn" type="submit" value="Search">
+            </form>
+            <div class="advanced">Advanced</div>
+        </nav>
+    </header>
+    <main id="main">
+        <section id="hero-section">
+            <nav class="hero-navbar">
+                <ul>
+                    <li class="home">
+                        <a>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class="fa-solid fa-heart"></i>
+                            Saved
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            Electronics
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            Fashion
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            Health & Beauty
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            Home & Garden
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            Sports
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            Collectibles and Art
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            Industrial equipement
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            Motors
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            Deals
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            Sell
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="hero-display">
+                <div class="hero-display__info">
+                    <h1>
+                        Technology without limits
+                    </h1>
+                    <p>
+                        The electronics you are looking for are here
+                    </p>
+                    <a href="#">
+                        Buy now!
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <a class="hero-display__a" href="#">
+                </a>
+            </div>
+        </section>
+        <section id="call-to-action-section">
+            <div class="action__text">
+                <h2>Take your business to more people with eBay</h2>
+                <p>The tools you need  to do it are here</p>
+            </div>
+            <a href="#">
+                Create your account now
+                
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </section>
+        <section id="phone-section">
+            <div class="phone-section__header"> 
+                <div class="heading">
+                    <h2>Cell Phones & Smartphones</h2>
+                    <p>Recommended for you</p>
+                </div>
+                <a href="#">
+                    <span>See all</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="scroll-wrapper">
+                <div class="phone-section__content">
+                    <a class="phone-box">
+                        <img src="https://i.ebayimg.com/thumbs/images/g/1O8AAOSw3a9jIRrW/s-l225.webp">
+                        <p class="price">$6.74</p>
+                    </a>
+                    <a class="phone-box">
+                        <img src="https://i.ebayimg.com/thumbs/images/g/ZDgAAOSwLEth8GLy/s-l225.webp">
+                        <p class="price">$6.74</p>
+                    </a>
+                    <a class="phone-box">
+                        <img src="https://i.ebayimg.com/thumbs/images/g/Xz0AAOSwyXFayB9m/s-l225.webp">
+                        <p class="price">$9.98</p>
+                    </a>
+                    <a class="phone-box">
+                        <img src="https://i.ebayimg.com/thumbs/images/g/HrMAAOSwgBFjGgUM/s-l225.webp">
+                        <p class="price">$99.80</p>
+                    </a>
+                    <a class="phone-box">
+                        <img src="https://i.ebayimg.com/thumbs/images/g/e3UAAOSwkZxiv21a/s-l225.webp">
+                        <p class="price">$202.56</p>
+                    </a>
+                    <a class="phone-box">
+                        <img src="https://i.ebayimg.com/thumbs/images/g/2LkAAOSwIQZfDgi3/s-l225.webp">
+                        <p class="price">$303.84</p>
+                    </a>
+                    <a class="phone-box">
+                        <img src="https://i.ebayimg.com/thumbs/images/g/QAMAAOSwZ9BjMljN/s-l225.webp">
+                        <p class="price">$249.63</p>
+                    </a>
+                    <a class="phone-box">
+                        <img src="https://i.ebayimg.com/thumbs/images/g/3yUAAOSwsJJjJVLM/s-l225.webp">
+                        <p class="price">$1953.36</p>
+                    </a>
+                    <a class="phone-box">
+                        <img src="https://i.ebayimg.com/thumbs/images/g/e6EAAOSwg~tjRlx5/s-l225.webp">
+                        <p class="price">$729.00</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="shop-all-section">
+            <div class="shop-all-header">
+                <a href="#" class="h2">Shop all!</a>
+                <p>Items from US</p>
+                <a href="#" class="btn">
+                    Shop Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="scroll-wrapper">
+                <div class="item-wrapper">
+                <ul>
+                    <li>
+                        <a class="item-box" href="#">
+                            <img src="https://i.ebayimg.com/images/g/G~oAAOSwrYJf3lXo/s-l225.webp">
+                            <p>$54.6</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-box" href="#">
+                            <img src="https://i.ebayimg.com/images/g/DfkAAOSw9HVgZIo1/s-l225.webp">
+                            <p>$48.5</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-box" href="#">
+                            <img src="https://i.ebayimg.com/images/g/gjcAAOSwwFxg2jEs/s-l225.webp">
+                            <p>$34.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-box" href="#">
+                            <img src="https://i.ebayimg.com/images/g/yskAAOSwvcZhOhKF/s-l225.webp">
+                            <p>$888</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-box" href="#">
+                            <img src="https://i.ebayimg.com/images/g/6psAAOSwk8RhOhOJ/s-l225.webp">
+                            <p>$76.4</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-box" href="#">
+                            <img src="https://i.ebayimg.com/images/g/SQsAAOSwdJhiDZTx/s-l225.webp">
+                            <p>$89.56</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-box" href="#">
+                            <img src="https://i.ebayimg.com/images/g/g2kAAOSwZKBg2mNI/s-l225.webp">
+                            <p>$56.43</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-box" href="#">
+                            <img src="https://i.ebayimg.com/images/g/g2kAAOSwZKBg2mNI/s-l225.webp">
+                            <p>$86.86</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-box" href="#">
+                            <img src="https://i.ebayimg.com/images/g/6psAAOSwk8RhOhOJ/s-l225.webp">
+                            <p>$56</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-box" href="#">
+                            <img src="">
+                            <p>$89.34</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </section>
+        <section id="daily-deals-section">
+            <div class="daily-deals-header">
+                <h2>Daily Deals</h2>
+                <p>
+                    See all
+                    <i class="fa-solid fa-arrow-right"></i>
+                </p>
+            </div>
+            <div class="scroll-wrapper">
+                <div class="daily-deal-box">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.ebayimg.com/images/g/9p0AAOSwUmhifTNg/s-l225.webp">
+                            <p>$70.63</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.ebayimg.com/images/g/d7oAAOSwz-VjJMfm/s-l225.webp">
+                            <p>$34.89</p>
+                        </a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            
+        </section>
+        <section id="explore-section">
+            <h2>Explore Popular Categories</h2>
+            <ul class="explore-wrapper">
+                <li>
+                    <a>
+                        <img src="https://i.ebayimg.com/images/g/-1UAAOSwzH9f4xc5/s-l200.webp">
+                        <p>Sneakers</p>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="https://i.ebayimg.com/images/g/xR8AAOSwPVZfkEGQ/s-l200.webp">
+                        <p>Korean beauty</p>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="https://i.ebayimg.com/images/g/ikgAAOSwWb5fkEGQ/s-l200.webp">
+                        <p>Wristwatches</p>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="https://i.ebayimg.com/images/g/vJgAAOSwgYpfkEGQ/s-l200.webp">
+                        <p>Fishing</p>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="https://i.ebayimg.com/images/g/8Z0AAOSwik1fkEGQ/s-l200.webp">
+                        <p>Collectibles</p>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="https://i.ebayimg.com/images/g/Y7UAAOSwewJfkEGQ/s-l200.webp">
+                        <p>Smartphones</p>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <img src="https://i.ebayimg.com/images/g/mTcAAOSwPzVf4xc4/s-l200.webp">
+                        <p>Sell</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section id="car-section">
+            <div class="car-header">
+                <a href="#" class="h2">Warm up your <br>engines</a>
+                <p>Find the perfect accessories for your <br>car.</p>
+                <a href="#" class="btn">
+                    <p>Gear up</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <a href="#" class="car-image-link">
+
+            </a>
+        </section>
+        <section id="style-section">
+            <div class="style-header">
+                <a href="#" class="h2">Upgrade your <br>style</a>
+                <p>The best sneakers are here</p>
+                <a href="#" class="btn">
+                    <p>Match your pair</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <a href="#" class="style-image-link">
+            </a>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="footer-wrapper">
+            <div class="footer-lists">
+                <div class="footer__buy">
+                    <ul>
+                        <li>
+                            <a>Buy</a>
+                        </li>
+                        <li>
+                            <a>Registration</a>
+                        </li>
+                        <li>
+                            <a>eBay Money Back Guarantee</a>
+                        </li>
+                        <li>
+                            <a>Bidding & buying help</a>
+                        </li>
+                        <li>
+                            <a>Stores</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__sell-tools-app">
+                    <div class="footer__sell">
+                        <ul>
+                            <li>
+                                <a>Sell</a>
+                            </li>
+                            <li>
+                                <a>Start selling</a>
+                            </li>
+                            <li>
+                                <a>Learn to sell</a>
+                            </li>
+                            <li>
+                                <a>Affiliates</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="footer__tools-app">
+                        <ul>
+                            <li>
+                                <a>Tools & apps</a>
+                            </li>
+                            <li>
+                                <a>Developers</a>
+                            </li>
+                            <li>
+                                <a>Security center</a>
+                            </li>
+                            <li>
+                                <a>Site map</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__connected">
+                    <ul>
+                        <li>
+                            <a>Stay connected</a>
+                        </li>
+                        <li>
+                            <a>eBay's Blogs</a>
+                        </li>
+                        <li>
+                            <a class="icon">
+                                <i class="fa-brands fa-square-facebook"></i>
+                                <p>Facebooks</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon">
+                                <i class="fa-brands fa-square-twitter"></i>
+                                <p>Twitter</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__about">
+                    <ul>
+                        <li>
+                            <a>About eBay</a>
+                        </li>
+                        <li>
+                            <a>Company info</a>
+                        </li>
+                        <li>
+                            <a>News</a>
+                        </li>
+                        <li>
+                            <a>Investors</a>
+                        </li>
+                        <li>
+                            <a>Careers</a>
+                        </li>
+                        <li>
+                            <a>Government relations</a>
+                        </li>
+                        <li>
+                            <a>Advertise with us</a>
+                        </li>
+                        <li>
+                            <a>Policies</a>
+                        </li>
+                        <li>
+                            <a>Verified Rights Owner (VeRO) Program</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="others">
+                    <div class="help-contact">
+                        <ul>
+                            <li>
+                                <a>Help & Contact</a>
+                            </li>
+                            <li>
+                                <a>Seller information Center</a>
+                            </li>
+                            <li>
+                                <a>Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="community">
+                        <ul>
+                            <li>
+                                <a>Community</a>
+                            </li>
+                            <li>
+                                <a>Annoucements</a>
+                            </li>
+                            <li>
+                                <a>Discussion boards</a>
+                            </li>
+                            <li>
+                                <a>eBay Giving Works</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="site">
+                        <ul>
+                            <li>
+                                <a>Ebay Sites</a>
+                            </li>
+                            <li>
+                                <div class="site-btn">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/255px-Flag_of_the_United_States.svg.png">
+                                    <p>United States</p>
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                Copyright © 1995-2022 eBay Inc. All Rights Reserved. 
+                &nbsp<a href="#">Accessibility</a>,
+                &nbsp<a href="#">User Agreement</a>, 
+                &nbsp<a href="#">Privacy</a>, 
+                &nbsp<a href="#">Payments Terms of Use</a>, 
+                &nbsp<a href="#">Cookies</a>, 
+                &nbsp<a href="#">Do not sell my personal information</a>
+                &nbspand 
+                &nbsp<a href="#">AdChoice</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="index.js"></script>
+</html>
